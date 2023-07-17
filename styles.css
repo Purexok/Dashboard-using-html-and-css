@@ -1,0 +1,106 @@
+    /* This selector is precuder Class that is not chained to anything (This will target everything every selector)*/
+    :root {
+        /*This is variable*/
+        --color-primary: #44f6fd;
+        --color-background: #242424;
+        --color-text: #f9f9f9;
+        --color-card: #1b1b1b;
+        --color-label: #aaaaaa
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background: var(--color-background);
+        color: var(--color-text)
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
+    .card {
+        /*Yea verticaly elements ko place kr de ga*/
+        display: flex;
+        /* yea sabhi elements ko centre mai align kr de ga */
+        align-items: center;
+        /* yea sabhi elements ko evenly space kr de ga  */
+        justify-content: space-around;
+        /* width: 200px; */
+        padding: 1rem;
+        background: var(--color-card);
+        border-radius: 1rem;
+    }
+
+    .card-h4 {
+        /* margin-bottom: 4px; */
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: var(--color-label);
+        margin-bottom: -5px;
+    }
+
+    .card-h2 {
+        font-size: 1.75rem;
+        font-weight: 500;
+        /* margin-top: -6px; */
+    }
+
+    .card-icon {
+        /*Jab b ik single element ke sath deal krna toh grid use kro insted of flex box feature*/
+        display: grid;
+        place-items: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        color: var(--color-primary);
+        font-size: 2rem;
+        background: rgb(255, 255, 255, 0.1);
+    }
+
+    .row {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .container {
+        /* width: 1080px;
+        margin: 0 auto; */
+        padding: 1rem;
+        /* background: red; */
+    }
+
+    .card-list {
+        display: flex;
+        gap: 1.25rem;
+        width: 50%;
+    }
+
+    .card-list-badge {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: var(--color-primary);
+    }
+
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .card-headline {
+        width: 25%;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+    }
